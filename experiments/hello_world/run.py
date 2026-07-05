@@ -99,7 +99,6 @@ def main():
         ("Hybrid (BM25+Vector)", hybrid_retriever),
     ]
 
-    from evalrag.core.experiment import QAPair
     from evalrag.core.types import ExperimentResult, QueryResult
 
     all_results: list[ExperimentResult] = []
@@ -260,7 +259,7 @@ def main():
     html_path = Reporter.to_html(all_results, output_dir=report_dir, context=report_context)
 
     print(f"\n{'=' * 65}")
-    print(f"  RESULTS")
+    print("  RESULTS")
     print(f"{'=' * 65}")
     print(f"{'Experiment':35s} {'F1@5':>8s} {'MRR':>8s} {'MAP':>8s} {'Overlap':>8s}")
     print("-" * 65)

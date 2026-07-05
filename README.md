@@ -102,12 +102,12 @@ for r in results:
 Run the built-in demo that proves hybrid search outperforms either approach alone:
 
 ```bash
-PYTHONPATH=src python examples/hello_world.py
+PYTHONPATH=src python experiments/hello_world/run.py
 ```
 
-Generates a timestamped interactive HTML report with F1 scorecards, D3 charts, PCA embedding scatter plot, and cosine similarity heatmap. See the [demo report](examples/reports/demo_hybrid_vs_bm25_vs_vector.html) for sample output.
+Generates a timestamped interactive HTML report with F1 scorecards, D3 charts, PCA embedding scatter plot, and cosine similarity heatmap. See the [demo report](experiments/hello_world/reports/demo_hybrid_vs_bm25_vs_vector.html) for sample output.
 
-To create your own experiment, copy [`examples/experiment_template.py`](examples/experiment_template.py) and customize.
+To create your own experiment, duplicate the `experiments/hello_world/` folder or start from [`experiments/template.py`](experiments/template.py).
 
 ## Docs
 

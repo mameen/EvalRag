@@ -11,7 +11,7 @@ EvalRAG is a composable RAG evaluation library. You plug together components (ex
 ## Quick Start
 
 ```bash
-PYTHONPATH=src python examples/hello_world.py
+PYTHONPATH=src python experiments/hello_world/run.py
 ```
 
 This runs a complete experiment comparing BM25 vs Vector vs Hybrid retrieval on a 10-chapter AI knowledge base with 20 evaluation queries (10 keyword, 10 semantic). Opens an interactive HTML report.
@@ -36,22 +36,24 @@ src/evalrag/
   registry.py            # Plugin registry, config-driven experiment builder
   cli.py                 # Typer CLI (run, compare, datasets, download)
 
-examples/
-  hello_world.py                    # Complete working demo
-  experiment_template.py            # Copy-and-customize template
-  data/knowledge_base.txt           # 10-chapter AI knowledge base (40 chunks)
-  data/eval_dataset.json            # 20 queries with ground truth
-  reports/
-    demo_hybrid_vs_bm25_vs_vector.html  # Sample report output
-    demo_hybrid_vs_bm25_vs_vector.json  # Sample JSON output
+experiments/
+  template.py                       # Copy-and-customize starter
+  hello_world/                      # Duplicate this folder for new experiments
+    run.py                          # Experiment script
+    README.md                       # Results and instructions
+    data/knowledge_base.txt         # 10-chapter AI knowledge base (40 chunks)
+    data/eval_dataset.json          # 20 queries with ground truth
+    reports/
+      demo_hybrid_vs_bm25_vs_vector.html  # Sample report output
+      demo_hybrid_vs_bm25_vs_vector.json  # Sample JSON output
 ```
 
 ## Creating a New Experiment
 
-1. Copy `examples/experiment_template.py`
+1. Copy `experiments/experiment_template.py`
 2. Replace data paths (`KB_PATH`, `EVAL_PATH`) with your own
 3. Adjust configs: chunk size, embedder, retriever combos, hybrid weights
-4. Run with `PYTHONPATH=src python examples/your_experiment.py`
+4. Run with `PYTHONPATH=src python experiments/your_experiment.py`
 
 ## Report Features
 

@@ -4,11 +4,11 @@ Steps:
   1. Replace the data paths with your own knowledge base and eval dataset
   2. Configure your retrievers (add/remove/modify configs list)
   3. Adjust chunking params, embedder, weights, k values
-  4. Run: PYTHONPATH=src python examples/my_experiment.py
+  4. Run: PYTHONPATH=src python experiments/my_experiment/run.py
 
-Reports (HTML + JSON) are written to examples/reports/ with timestamps.
-See examples/hello_world.py for a complete working example.
-See examples/reports/demo_hybrid_vs_bm25_vs_vector.html for sample output.
+Reports (HTML + JSON) are written to your experiment's reports/ folder.
+See experiments/hello_world/ for a complete working example.
+See experiments/hello_world/reports/demo_hybrid_vs_bm25_vs_vector.html for sample output.
 """
 
 from __future__ import annotations

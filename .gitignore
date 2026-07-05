@@ -15,6 +15,5 @@ venv/
 *.chromadb/
 chroma_data/
 results/
-examples/reports/2*
 *.ipynb_checkpoints/
 .data/
