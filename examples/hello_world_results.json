@@ -1,0 +1,130 @@
+{
+  "name": "hello-world",
+  "timestamp": "2026-07-05T11:41:13.929744",
+  "config": {},
+  "mean_scores": {
+    "keyword_overlap": 1.0
+  },
+  "ranking_results": [
+    {
+      "metric": "mrr",
+      "value": 0.625,
+      "per_query": {
+        "What is RAG?": 1.0,
+        "What does faithfulness measure?": 0.25
+      }
+    },
+    {
+      "metric": "map",
+      "value": 0.5416666666666666,
+      "per_query": {
+        "What is RAG?": 0.8333333333333333,
+        "What does faithfulness measure?": 0.25
+      }
+    },
+    {
+      "metric": "precision@1",
+      "value": 0.5,
+      "per_query": {
+        "What is RAG?": 1.0,
+        "What does faithfulness measure?": 0.0
+      }
+    },
+    {
+      "metric": "recall@1",
+      "value": 0.25,
+      "per_query": {
+        "What is RAG?": 0.5,
+        "What does faithfulness measure?": 0.0
+      }
+    },
+    {
+      "metric": "ndcg@1",
+      "value": 0.5,
+      "per_query": {
+        "What is RAG?": 1.0,
+        "What does faithfulness measure?": 0.0
+      }
+    },
+    {
+      "metric": "precision@3",
+      "value": 0.3333333333333333,
+      "per_query": {
+        "What is RAG?": 0.6666666666666666,
+        "What does faithfulness measure?": 0.0
+      }
+    },
+    {
+      "metric": "recall@3",
+      "value": 0.5,
+      "per_query": {
+        "What is RAG?": 1.0,
+        "What does faithfulness measure?": 0.0
+      }
+    },
+    {
+      "metric": "ndcg@3",
+      "value": 0.4598603945740938,
+      "per_query": {
+        "What is RAG?": 0.9197207891481876,
+        "What does faithfulness measure?": 0.0
+      }
+    }
+  ],
+  "query_results": [
+    {
+      "query": "What is RAG?",
+      "ground_truth": "RAG combines information retrieval with text generation.",
+      "answer": "Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation. In a RAG pipeline, a user query is first used to retrieve relevant documents from a knowle",
+      "retrieval": {
+        "chunks": [
+          "Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation. In a RAG pipeline, a user query is first used to retrieve relevant documents from a knowle",
+          "ing the retrieved context\n\nEvaluation of RAG systems typically measures:\n- Faithfulness: whether the answer is supported by the context\n- Answer relevancy: whether the answer addresses the question\n- ",
+          "xt to a large language model (LLM), which generates an answer grounded in the retrieved information.\n\nThe key components of a RAG system are:\n1. Document ingestion: extracting text from source documen",
+          "e pieces\n3. Embedding: converting text chunks into vector representations\n4. Storage: indexing vectors in a vector database for efficient retrieval\n5. Retrieval: finding the most relevant chunks for a",
+          "e relevant\n- Context recall: whether all relevant information was retrieved\n\nCommon evaluation frameworks include RAGAS, which provides automated metrics for these dimensions using LLM-based assessmen"
+        ],
+        "scores": [
+          1.5815111479608386,
+          1.1709378348155377,
+          0.2743046533946055,
+          0.2743046533946055,
+          0.0
+        ]
+      },
+      "scores": [
+        {
+          "metric": "keyword_overlap",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "query": "What does faithfulness measure?",
+      "ground_truth": "Faithfulness measures whether the answer is supported by the context.",
+      "answer": "ing the retrieved context\n\nEvaluation of RAG systems typically measures:\n- Faithfulness: whether the answer is supported by the context\n- Answer relevancy: whether the answer addresses the question\n- ",
+      "retrieval": {
+        "chunks": [
+          "ing the retrieved context\n\nEvaluation of RAG systems typically measures:\n- Faithfulness: whether the answer is supported by the context\n- Answer relevancy: whether the answer addresses the question\n- ",
+          "Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation. In a RAG pipeline, a user query is first used to retrieve relevant documents from a knowle",
+          "xt to a large language model (LLM), which generates an answer grounded in the retrieved information.\n\nThe key components of a RAG system are:\n1. Document ingestion: extracting text from source documen",
+          "e pieces\n3. Embedding: converting text chunks into vector representations\n4. Storage: indexing vectors in a vector database for efficient retrieval\n5. Retrieval: finding the most relevant chunks for a",
+          "e relevant\n- Context recall: whether all relevant information was retrieved\n\nCommon evaluation frameworks include RAGAS, which provides automated metrics for these dimensions using LLM-based assessmen"
+        ],
+        "scores": [
+          1.3955752804727886,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "scores": [
+        {
+          "metric": "keyword_overlap",
+          "value": 1.0
+        }
+      ]
+    }
+  ]
+}

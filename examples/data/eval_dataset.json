@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Who coined the term Artificial Intelligence and when?",
+    "ground_truth": "John McCarthy coined the term Artificial Intelligence in 1956 at the Dartmouth Conference.",
+    "type": "keyword",
+    "relevant_chunks": ["John McCarthy", "1956", "Dartmouth Conference"]
+  },
+  {
+    "question": "What is the F1 score formula?",
+    "ground_truth": "F1 = 2 × (Precision × Recall) / (Precision + Recall). It combines precision and recall using the harmonic mean.",
+    "type": "keyword",
+    "relevant_chunks": ["F1", "harmonic mean", "Precision", "Recall"]
+  },
+  {
+    "question": "How much electricity did GPT-3 training consume?",
+    "ground_truth": "GPT-3's training consumed an estimated 1,287 megawatt-hours of electricity.",
+    "type": "keyword",
+    "relevant_chunks": ["1,287 megawatt-hours", "GPT-3"]
+  },
+  {
+    "question": "What was XCON and how much money did it save?",
+    "ground_truth": "XCON was an expert system used by Digital Equipment Corporation to configure VAX computer systems. It saved the company an estimated forty million dollars per year.",
+    "type": "keyword",
+    "relevant_chunks": ["XCON", "Digital Equipment Corporation", "forty million"]
+  },
+  {
+    "question": "What is the transformer self-attention mechanism?",
+    "ground_truth": "Self-attention projects input embeddings into queries, keys, and values. Attention scores are computed as the scaled dot product of queries and keys, then used to weight the values.",
+    "type": "keyword",
+    "relevant_chunks": ["self-attention", "queries", "keys", "values", "scaled dot product"]
+  },
+  {
+    "question": "What did AlexNet achieve in 2012?",
+    "ground_truth": "AlexNet won the ImageNet competition in 2012 by a significant margin, reducing the error rate from 26 percent to 16 percent, sparking the deep learning revolution.",
+    "type": "keyword",
+    "relevant_chunks": ["AlexNet", "ImageNet", "2012", "error rate"]
+  },
+  {
+    "question": "What did the Lighthill Report of 1973 conclude?",
+    "ground_truth": "The Lighthill Report of 1973 in the United Kingdom concluded that AI research had failed to achieve its grandiose objectives, leading to government funding being slashed.",
+    "type": "keyword",
+    "relevant_chunks": ["Lighthill Report", "1973", "United Kingdom"]
+  },
+  {
+    "question": "What year did Hochreiter and Schmidhuber invent LSTM?",
+    "ground_truth": "Long Short-Term Memory networks were invented by Hochreiter and Schmidhuber in 1997, using gate mechanisms to selectively remember and forget information.",
+    "type": "keyword",
+    "relevant_chunks": ["Hochreiter", "Schmidhuber", "1997", "LSTM"]
+  },
+  {
+    "question": "MYCIN Stanford bacterial infections",
+    "ground_truth": "MYCIN was developed at Stanford University and could diagnose bacterial infections and recommend antibiotics with accuracy comparable to human experts.",
+    "type": "keyword",
+    "relevant_chunks": ["MYCIN", "Stanford", "bacterial infections"]
+  },
+  {
+    "question": "ENIAC weight square feet additions per second",
+    "ground_truth": "ENIAC weighed 30 tons, occupied 1,800 square feet, and could perform 5,000 additions per second.",
+    "type": "keyword",
+    "relevant_chunks": ["ENIAC", "30 tons", "1,800 square feet", "5,000 additions"]
+  },
+  {
+    "question": "How do computers figure out what words mean?",
+    "ground_truth": "Embedding models convert text into dense vector representations that capture semantic meaning, placing similar concepts close together in vector space using contrastive learning.",
+    "type": "semantic",
+    "relevant_chunks": ["embedding", "vector", "semantic meaning", "contrastive learning"]
+  },
+  {
+    "question": "Why do chatbots sometimes confidently say wrong things?",
+    "ground_truth": "Hallucination is a significant challenge where models generate plausible-sounding but incorrect information. Grounding techniques like requiring citations help mitigate this.",
+    "type": "semantic",
+    "relevant_chunks": ["hallucination", "plausible-sounding", "grounding"]
+  },
+  {
+    "question": "What technique lets you combine keyword matching with meaning-based lookup?",
+    "ground_truth": "Hybrid retrieval combines vector similarity search with BM25 keyword matching using reciprocal rank fusion, achieving better performance than either method alone.",
+    "type": "semantic",
+    "relevant_chunks": ["hybrid", "reciprocal rank fusion", "BM25", "vector"]
+  },
+  {
+    "question": "How did scientists fix the problem of signals fading away in multi-layered networks?",
+    "ground_truth": "ResNet solved the vanishing gradient problem with skip connections enabling 150+ layer networks. LSTM used gate mechanisms to selectively remember and forget information.",
+    "type": "semantic",
+    "relevant_chunks": ["vanishing gradient", "skip connections", "ResNet", "LSTM"]
+  },
+  {
+    "question": "What environmental damage comes from building these large models?",
+    "ground_truth": "The environmental cost of training large models is substantial. GPT-3 consumed 1,287 megawatt-hours. Responsible development requires energy-efficient architectures.",
+    "type": "semantic",
+    "relevant_chunks": ["environmental cost", "megawatt-hours", "energy-efficient"]
+  },
+  {
+    "question": "How can systems give trustworthy answers by checking external sources instead of guessing?",
+    "ground_truth": "RAG addresses the limitation of frozen knowledge by combining information retrieval with generation. Documents are chunked, embedded, stored in vector databases, and retrieved at query time to ground the model's response.",
+    "type": "semantic",
+    "relevant_chunks": ["Retrieval-Augmented Generation", "retrieval", "grounded", "verifiable"]
+  },
+  {
+    "question": "What is the clever shortcut that makes searching billions of vectors fast enough to be useful?",
+    "ground_truth": "Approximate nearest neighbor algorithms trade a small amount of accuracy for dramatic speed improvements. HNSW graphs build multi-layer graph structures enabling logarithmic-time search.",
+    "type": "semantic",
+    "relevant_chunks": ["approximate nearest neighbor", "Hierarchical Navigable Small World", "logarithmic"]
+  },
+  {
+    "question": "When researchers tell a model to think step-by-step before answering, what happens?",
+    "ground_truth": "Chain-of-thought prompting encourages the model to show its reasoning process step by step before providing a final answer, improving accuracy on complex reasoning tasks.",
+    "type": "semantic",
+    "relevant_chunks": ["chain-of-thought", "reasoning", "step by step"]
+  },
+  {
+    "question": "How does controlling randomness in the output affect factual correctness?",
+    "ground_truth": "Temperature controls output randomness. Lower temperatures produce deterministic, focused responses suitable for factual QA. Higher temperatures increase creativity but risk inaccuracies. For RAG, 0.0-0.3 is recommended.",
+    "type": "semantic",
+    "relevant_chunks": ["temperature", "randomness", "deterministic"]
+  },
+  {
+    "question": "How can a machine play board games better than any human who ever lived?",
+    "ground_truth": "AlphaGo defeated world champion Lee Sedol using a combination of deep learning and Monte Carlo tree search. Deep Q-Networks combined Q-learning with deep neural networks to master Atari games from pixel input.",
+    "type": "semantic",
+    "relevant_chunks": ["AlphaGo", "Lee Sedol", "Monte Carlo tree search", "Deep Q-Networks"]
+  }
+]
