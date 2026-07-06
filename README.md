@@ -1,5 +1,7 @@
 # EvalRAG
 
+![](./docs/EvalRag.png)
+
 Composable RAG evaluation library. Build experiments by plugging together extractors, chunkers, embedders, retrievers, generators, and evaluators — then compare results across configurations.
 
 - **Composable pipeline** — swap extractors, chunkers, embedders, retrievers, generators, evaluators like LEGO
