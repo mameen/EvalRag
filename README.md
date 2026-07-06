@@ -1,6 +1,7 @@
-# EvalRAG
 
-![](./docs/EvalRag.png)
+![](./docs/evalrag_banner.png)
+
+# EvalRAG
 
 Composable RAG evaluation library. Build experiments by plugging together extractors, chunkers, embedders, retrievers, generators, and evaluators — then compare results across configurations.
 
