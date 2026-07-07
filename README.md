@@ -3,6 +3,11 @@
 
 # EvalRAG
 
+[![CI](https://github.com/mameen/EvalRag/actions/workflows/ci.yml/badge.svg)](https://github.com/mameen/EvalRag/actions/workflows/ci.yml)
+[![PyPI version](https://img.shields.io/pypi/v/evalrag.svg)](https://pypi.org/project/evalrag/)
+[![Python versions](https://img.shields.io/pypi/pyversions/evalrag.svg)](https://pypi.org/project/evalrag/)
+[![License: MIT](https://img.shields.io/pypi/l/evalrag.svg)](https://github.com/mameen/EvalRag/blob/main/LICENSE)
+
 Composable RAG evaluation library. Build experiments by plugging together extractors, chunkers, embedders, retrievers, generators, and evaluators — then compare results across configurations.
 
 - **Composable pipeline** — swap extractors, chunkers, embedders, retrievers, generators, evaluators like LEGO
