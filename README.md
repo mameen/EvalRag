@@ -1,7 +1,12 @@
 
-![](./docs/evalrag_banner.png)
+![](https://raw.githubusercontent.com/mameen/EvalRag/main/docs/evalrag_banner.png)
 
 # EvalRAG
+
+[![CI](https://github.com/mameen/EvalRag/actions/workflows/ci.yml/badge.svg)](https://github.com/mameen/EvalRag/actions/workflows/ci.yml)
+[![PyPI version](https://img.shields.io/pypi/v/evalrag.svg)](https://pypi.org/project/evalrag/)
+[![Python versions](https://img.shields.io/pypi/pyversions/evalrag.svg)](https://pypi.org/project/evalrag/)
+[![License: MIT](https://img.shields.io/pypi/l/evalrag.svg)](https://github.com/mameen/EvalRag/blob/main/LICENSE)
 
 Composable RAG evaluation library. Build experiments by plugging together extractors, chunkers, embedders, retrievers, generators, and evaluators — then compare results across configurations.
 
@@ -9,14 +14,14 @@ Composable RAG evaluation library. Build experiments by plugging together extrac
 - **Hybrid search proving ground** — built-in demo shows BM25+Vector outperforms either alone (+21% F1 lift)
 - **Interactive HTML reports** — F1 scorecards, D3 charts, light/dark mode, timestamped exports
 - **Embedding space visualizations** — PCA scatter plot with retrieval edges + cosine similarity heatmap
-- **Local-first** — SentenceTransformers + Ollama, no API keys needed
+- **Local or cloud models** — run fully local with SentenceTransformers + Ollama (no API keys), or plug in cloud providers like OpenAI
 - **Zero-config hello world** — one command, full experiment, publication-ready report
 - **Pure Python BM25** — no native dependencies, no numpy
 - **20 metrics out of the box** — F1, Precision, Recall, MRR, MAP at configurable k values
 
-![Embedding Space Projection (PCA) — queries and chunks projected to 2D with retrieval edges](docs/PCA.png)
+![Embedding Space Projection (PCA) — queries and chunks projected to 2D with retrieval edges](https://raw.githubusercontent.com/mameen/EvalRag/main/docs/PCA.png)
 
-![Query × Chunk Cosine Similarity Heatmap](docs/Heatmap.png)
+![Query × Chunk Cosine Similarity Heatmap](https://raw.githubusercontent.com/mameen/EvalRag/main/docs/Heatmap.png)
 
 ## Install
 
@@ -108,15 +113,15 @@ Run the built-in demo that proves hybrid search outperforms either approach alon
 PYTHONPATH=src python experiments/hello_world/run.py
 ```
 
-Generates a timestamped interactive HTML report with F1 scorecards, D3 charts, PCA embedding scatter plot, and cosine similarity heatmap. See the [demo report](experiments/hello_world/reports/demo_hybrid_vs_bm25_vs_vector.html) for sample output.
+Generates a timestamped interactive HTML report with F1 scorecards, D3 charts, PCA embedding scatter plot, and cosine similarity heatmap. See the [demo report](https://github.com/mameen/EvalRag/blob/main/experiments/hello_world/reports/demo_hybrid_vs_bm25_vs_vector.html) for sample output.
 
-To create your own experiment, duplicate the `experiments/hello_world/` folder or start from [`experiments/template.py`](experiments/template.py).
+To create your own experiment, duplicate the `experiments/hello_world/` folder or start from [`experiments/template.py`](https://github.com/mameen/EvalRag/blob/main/experiments/template.py).
 
 ## Docs
 
-- [LLM Agent Guide](docs/guide_llm_agents.md) — comprehensive guide for AI coding agents
-- [Functional Requirements](docs/functional_requirements.md) — FR01–FR13
-- [Architecture ADR](docs/adrs/001-architecture-pattern.md)
+- [LLM Agent Guide](https://github.com/mameen/EvalRag/blob/main/docs/guide_llm_agents.md) — comprehensive guide for AI coding agents
+- [Functional Requirements](https://github.com/mameen/EvalRag/blob/main/docs/functional_requirements.md) — FR01–FR13
+- [Architecture ADR](https://github.com/mameen/EvalRag/blob/main/docs/adrs/001-architecture-pattern.md)
 
 ## Compare experiments
 
