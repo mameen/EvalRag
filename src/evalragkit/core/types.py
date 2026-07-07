@@ -1,4 +1,4 @@
-"""Core data types for EvalRAG."""
+"""Core data types for EvalRag."""
 
 from __future__ import annotations
 

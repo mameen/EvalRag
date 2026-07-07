@@ -1,4 +1,4 @@
-"""Experiment runner -- the unit of composition in EvalRAG.
+"""Experiment runner -- the unit of composition in EvalRag.
 
 An Experiment holds references to all pipeline components and a Q&A dataset.
 Call run() to execute the full pipeline and collect results.
@@ -12,8 +12,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from evalrag.core.protocols import Chunker, Embedder, Evaluator, Extractor, Generator, Ranker, Retriever, Store
-from evalrag.core.types import (
+from evalragkit.core.protocols import Chunker, Embedder, Evaluator, Extractor, Generator, Ranker, Retriever, Store
+from evalragkit.core.types import (
     Chunk,
     EvaluationScore,
     ExperimentResult,

@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from typing import Protocol, runtime_checkable
 
-from evalrag.core.types import Chunk, Document, EvaluationScore, RankingResult, RetrievalResult
+from evalragkit.core.types import Chunk, Document, EvaluationScore, RankingResult, RetrievalResult
 
 
 @runtime_checkable

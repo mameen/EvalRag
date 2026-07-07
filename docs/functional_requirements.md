@@ -1,4 +1,4 @@
-# EvalRAG - Functional Requirements
+# EvalRag - Functional Requirements
 
 ## Purpose
 
@@ -80,14 +80,14 @@ A composable RAG evaluation library that tests different retrieval, generation, 
 
 ### FR10 - CLI
 
-- FR10.1: `evalrag embed <file>` - ingest a document
-- FR10.2: `evalrag run <config>` - run an experiment from config
-- FR10.3: `evalrag compare <result1> <result2>` - compare experiment results
-- FR10.4: `evalrag explore <result>` - inspect retrieval and ranking details
+- FR10.1: `evalragkit embed <file>` - ingest a document
+- FR10.2: `evalragkit run <config>` - run an experiment from config
+- FR10.3: `evalragkit compare <result1> <result2>` - compare experiment results
+- FR10.4: `evalragkit explore <result>` - inspect retrieval and ranking details
 
 ### FR11 - Library API
 
-- FR11.1: Usable as `import evalrag` with fluent or builder API
+- FR11.1: Usable as `import evalragkit` with fluent or builder API
 - FR11.2: Each component independently instantiable and testable
 - FR11.3: No global state; all config explicit per experiment
 

@@ -1,4 +1,4 @@
-# EvalRAG
+# EvalRag
 
 Read [docs/guide_llm_agents.md](docs/guide_llm_agents.md) for full project context, structure, and conventions.
 

@@ -1,12 +1,12 @@
 
 ![](https://raw.githubusercontent.com/mameen/EvalRag/main/docs/evalrag_banner.png)
 
-# EvalRAG
+# EvalRag
 
 [![CI](https://github.com/mameen/EvalRag/actions/workflows/ci.yml/badge.svg)](https://github.com/mameen/EvalRag/actions/workflows/ci.yml)
-[![PyPI version](https://img.shields.io/pypi/v/evalrag.svg)](https://pypi.org/project/evalrag/)
-[![Python versions](https://img.shields.io/pypi/pyversions/evalrag.svg)](https://pypi.org/project/evalrag/)
-[![License: MIT](https://img.shields.io/pypi/l/evalrag.svg)](https://github.com/mameen/EvalRag/blob/main/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/evalragkit.svg)](https://pypi.org/project/evalragkit/)
+[![Python versions](https://img.shields.io/pypi/pyversions/evalragkit.svg)](https://pypi.org/project/evalragkit/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/mameen/EvalRag/blob/main/LICENSE)
 
 Composable RAG evaluation library. Build experiments by plugging together extractors, chunkers, embedders, retrievers, generators, and evaluators — then compare results across configurations.
 
@@ -26,22 +26,22 @@ Composable RAG evaluation library. Build experiments by plugging together extrac
 ## Install
 
 ```bash
-pip install evalrag                  # core only
-pip install evalrag[chromadb,openai] # with ChromaDB + OpenAI
-pip install evalrag[all]             # everything
+pip install evalragkit                  # core only
+pip install evalragkit[chromadb,openai] # with ChromaDB + OpenAI
+pip install evalragkit[all]             # everything
 ```
 
 ## Quickstart
 
 ```python
-from evalrag.extractors.unstructured import PlainTextExtractor
-from evalrag.chunkers.token import TokenChunker
-from evalrag.embedders.openai import OpenAIEmbedder
-from evalrag.stores.chromadb import ChromaDBStore
-from evalrag.retrievers.vector import VectorRetriever
-from evalrag.generators.openai import OpenAIGenerator
-from evalrag.evaluators.ragas import RagasEvaluator
-from evalrag.core.experiment import Experiment, QAPair
+from evalragkit.extractors.unstructured import PlainTextExtractor
+from evalragkit.chunkers.token import TokenChunker
+from evalragkit.embedders.openai import OpenAIEmbedder
+from evalragkit.stores.chromadb import ChromaDBStore
+from evalragkit.retrievers.vector import VectorRetriever
+from evalragkit.generators.openai import OpenAIGenerator
+from evalragkit.evaluators.ragas import RagasEvaluator
+from evalragkit.core.experiment import Experiment, QAPair
 
 # wire up the pipeline
 extractor = PlainTextExtractor()
@@ -81,8 +81,8 @@ Experiment.save_result(result, "results/baseline.json")
 ## Swap components
 
 ```python
-from evalrag.retrievers.keyword import BM25Retriever
-from evalrag.retrievers.hybrid import HybridRetriever
+from evalragkit.retrievers.keyword import BM25Retriever
+from evalragkit.retrievers.hybrid import HybridRetriever
 
 keyword = BM25Retriever()
 keyword.add(chunks)  # chunks from ingest
@@ -93,7 +93,7 @@ hybrid = HybridRetriever(retrievers=[retriever, keyword], weights=[0.7, 0.3])
 ## Ranking evaluation
 
 ```python
-from evalrag.ranking.metrics import RankingEvaluator
+from evalragkit.ranking.metrics import RankingEvaluator
 
 ranker = RankingEvaluator(k_values=[1, 3, 5, 10])
 results = ranker.rank(
@@ -126,7 +126,7 @@ To create your own experiment, duplicate the `experiments/hello_world/` folder o
 ## Compare experiments
 
 ```python
-from evalrag.exploration.reporter import Reporter
+from evalragkit.exploration.reporter import Reporter
 
 table = Reporter.to_table([result_a, result_b])
 print(table)
@@ -135,10 +135,10 @@ print(table)
 ## CLI
 
 ```bash
-evalrag run experiment.json --output results.json
-evalrag compare results_a.json results_b.json
-evalrag datasets
-evalrag download sample
+evalragkit run experiment.json --output results.json
+evalragkit compare results_a.json results_b.json
+evalragkit datasets
+evalragkit download sample
 ```
 
 ## Architecture

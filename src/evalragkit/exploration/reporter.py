@@ -6,7 +6,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from evalrag.core.types import ExperimentResult
+from evalragkit.core.types import ExperimentResult
 
 
 def _timestamp() -> str:
@@ -112,7 +112,7 @@ def _render_html(data: dict) -> str:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EvalRAG Report</title>
+<title>EvalRag Report</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root {{
@@ -238,7 +238,7 @@ details summary:hover {{ color: var(--text); }}
 <body>
 <script>
 (function(){{
-  var t = localStorage.getItem('evalrag-theme') ||
+  var t = localStorage.getItem('evalragkit-theme') ||
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   document.documentElement.setAttribute('data-theme', t);
 }})();
@@ -247,7 +247,7 @@ details summary:hover {{ color: var(--text); }}
   <span id="theme-icon">&#9790;</span>
 </button>
 <div class="container">
-  <h1>EvalRAG Report</h1>
+  <h1>EvalRag Report</h1>
   <p class="subtitle" id="report-time"></p>
 
   <!-- EXECUTIVE SUMMARY -->
@@ -308,13 +308,13 @@ const DATA = {json_data};
 
 // -- Theme ------------------------------------------------------------------
 function getTheme() {{
-  return localStorage.getItem('evalrag-theme') ||
+  return localStorage.getItem('evalragkit-theme') ||
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 }}
 function applyTheme(t) {{
   document.documentElement.setAttribute('data-theme', t);
   document.getElementById('theme-icon').innerHTML = t === 'dark' ? '&#9788;' : '&#9790;';
-  localStorage.setItem('evalrag-theme', t);
+  localStorage.setItem('evalragkit-theme', t);
 }}
 function toggleTheme() {{
   applyTheme(getTheme() === 'dark' ? 'light' : 'dark');

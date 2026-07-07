@@ -1,10 +1,10 @@
-# EvalRAG — LLM Agent Guide
+# EvalRag — LLM Agent Guide
 
-How to use EvalRAG for evaluating RAG pipelines. Aimed at LLM coding agents (Claude Code, Copilot, Cursor, etc.) assisting developers.
+How to use EvalRag for evaluating RAG pipelines. Aimed at LLM coding agents (Claude Code, Copilot, Cursor, etc.) assisting developers.
 
-## What EvalRAG Does
+## What EvalRag Does
 
-EvalRAG is a composable RAG evaluation library. You plug together components (extractors, chunkers, embedders, retrievers, generators, evaluators) and compare retrieval strategies side-by-side with interactive reports.
+EvalRag is a composable RAG evaluation library. You plug together components (extractors, chunkers, embedders, retrievers, generators, evaluators) and compare retrieval strategies side-by-side with interactive reports.
 
 **Key insight it proves**: Hybrid search (BM25 + Vector with Reciprocal Rank Fusion) outperforms either keyword or semantic search alone.
 
@@ -19,7 +19,7 @@ This runs a complete experiment comparing BM25 vs Vector vs Hybrid retrieval on 
 ## Project Structure
 
 ```
-src/evalrag/
+src/evalragkit/
   core/types.py          # Chunk, Document, RetrievalResult, ExperimentResult, etc.
   core/experiment.py     # Experiment runner
   extractors/            # PlainTextExtractor
@@ -111,7 +111,7 @@ embedder = SentenceTransformerEmbedder()       # all-MiniLM-L6-v2, 384 dims
 store = ChromaDBStore(collection_name="my_exp")
 
 # Ollama (local LLM)
-from evalrag.generators.ollama import OllamaGenerator
+from evalragkit.generators.ollama import OllamaGenerator
 generator = OllamaGenerator(model="llama3")
 
 # Hybrid retrieval

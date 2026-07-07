@@ -6,7 +6,7 @@ import math
 import re
 from collections import Counter
 
-from evalrag.core.types import Chunk, RetrievalResult
+from evalragkit.core.types import Chunk, RetrievalResult
 
 
 class BM25Retriever:

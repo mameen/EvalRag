@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
 
-from evalrag.core.experiment import QAPair
+from evalragkit.core.experiment import QAPair
 
 logger = logging.getLogger(__name__)
 
@@ -64,8 +64,8 @@ REGISTRY: dict[str, DatasetEntry] = {
         url="http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json",
         loader=_load_hotpotqa,
     ),
-    "evalrag-sample": DatasetEntry(
-        name="evalrag-sample",
+    "evalragkit-sample": DatasetEntry(
+        name="evalragkit-sample",
         description="Built-in sample Q&A pairs for quick testing (ships with the repo)",
         url="",
         loader=_load_json_qa,

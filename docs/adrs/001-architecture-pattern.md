@@ -2,11 +2,11 @@
 
 **Status:** Proposed
 **Date:** 2026-07-05
-**Context:** Choosing the extensibility pattern for EvalRAG's composable pipeline
+**Context:** Choosing the extensibility pattern for EvalRag's composable pipeline
 
 ## Problem
 
-EvalRAG must let users swap any pipeline component (chunker, embedder, store, retriever, generator, evaluator) independently. The original `evalrag_task` attempted a Visitor pattern that was never fully wired. We need a pattern that is:
+EvalRag must let users swap any pipeline component (chunker, embedder, store, retriever, generator, evaluator) independently. The original `evalragkit_task` attempted a Visitor pattern that was never fully wired. We need a pattern that is:
 
 1. Easy to extend (add a new vector DB without touching core)
 2. Easy to compose (mix-and-match components per experiment)
@@ -133,7 +133,7 @@ experiment = Experiment.from_config({"retriever": "chromadb", ...})
 1. **Every pipeline stage is a Protocol** -- no ABC inheritance required
 2. **Experiment is the unit of composition** -- holds references to all strategies
 3. **No global state** -- everything explicit via constructors
-4. **Extras pattern for dependencies** -- `pip install evalrag[chromadb]`, `evalrag[pinecone]`
+4. **Extras pattern for dependencies** -- `pip install evalragkit[chromadb]`, `evalragkit[pinecone]`
 5. **Registry is opt-in** -- used by CLI and YAML config, not by the library API
 6. **Ranking is first-class** -- retrieval quality is evaluated independently from generation quality
 7. **Exploration is built-in** -- every experiment result is inspectable and comparable
@@ -151,7 +151,7 @@ Minor and major bumps require maintainer approval.
 ## Package Structure
 
 ```
-evalrag/
+evalragkit/
   __init__.py
   core/
     protocols.py      # All Protocol definitions (Retriever, Generator, Evaluator, Ranker, etc.)
