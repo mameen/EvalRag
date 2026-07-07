@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import math
 
-from evalrag.core.types import RankingResult
+from evalragkit.core.types import RankingResult
 
 
 def f1_at_k(relevant: set[str], retrieved: list[str], k: int) -> float:

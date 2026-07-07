@@ -1,4 +1,4 @@
-"""EvalRAG experiment template — copy and customize for your own evaluations.
+"""EvalRag experiment template — copy and customize for your own evaluations.
 
 Steps:
   1. Replace the data paths with your own knowledge base and eval dataset
@@ -17,16 +17,16 @@ import json
 import math
 from pathlib import Path
 
-from evalrag.chunkers.token import TokenChunker
-from evalrag.core.types import EvaluationScore, Chunk, ExperimentResult, QueryResult
-from evalrag.exploration.reporter import Reporter
-from evalrag.extractors.unstructured import PlainTextExtractor
-from evalrag.ranking.metrics import RankingEvaluator
-from evalrag.retrievers.hybrid import HybridRetriever
-from evalrag.retrievers.keyword import BM25Retriever
-from evalrag.retrievers.vector import VectorRetriever
-from evalrag.embedders.sentence_transformer import SentenceTransformerEmbedder
-from evalrag.stores.chromadb import ChromaDBStore
+from evalragkit.chunkers.token import TokenChunker
+from evalragkit.core.types import EvaluationScore, Chunk, ExperimentResult, QueryResult
+from evalragkit.exploration.reporter import Reporter
+from evalragkit.extractors.unstructured import PlainTextExtractor
+from evalragkit.ranking.metrics import RankingEvaluator
+from evalragkit.retrievers.hybrid import HybridRetriever
+from evalragkit.retrievers.keyword import BM25Retriever
+from evalragkit.retrievers.vector import VectorRetriever
+from evalragkit.embedders.sentence_transformer import SentenceTransformerEmbedder
+from evalragkit.stores.chromadb import ChromaDBStore
 
 HERE = Path(__file__).parent
 

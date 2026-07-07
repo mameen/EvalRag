@@ -1,4 +1,4 @@
-"""EvalRAG hello world — BM25 vs Vector vs Hybrid showdown.
+"""EvalRag hello world — BM25 vs Vector vs Hybrid showdown.
 
 Proves that hybrid search outperforms either approach alone,
 using a 10-chapter AI knowledge base with keyword AND semantic queries.
@@ -10,16 +10,16 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from evalrag.chunkers.token import TokenChunker
-from evalrag.core.types import EvaluationScore, Chunk
-from evalrag.exploration.reporter import Reporter
-from evalrag.extractors.unstructured import PlainTextExtractor
-from evalrag.ranking.metrics import RankingEvaluator
-from evalrag.retrievers.hybrid import HybridRetriever
-from evalrag.retrievers.keyword import BM25Retriever
-from evalrag.retrievers.vector import VectorRetriever
-from evalrag.embedders.sentence_transformer import SentenceTransformerEmbedder
-from evalrag.stores.chromadb import ChromaDBStore
+from evalragkit.chunkers.token import TokenChunker
+from evalragkit.core.types import EvaluationScore, Chunk
+from evalragkit.exploration.reporter import Reporter
+from evalragkit.extractors.unstructured import PlainTextExtractor
+from evalragkit.ranking.metrics import RankingEvaluator
+from evalragkit.retrievers.hybrid import HybridRetriever
+from evalragkit.retrievers.keyword import BM25Retriever
+from evalragkit.retrievers.vector import VectorRetriever
+from evalragkit.embedders.sentence_transformer import SentenceTransformerEmbedder
+from evalragkit.stores.chromadb import ChromaDBStore
 
 HERE = Path(__file__).parent
 
@@ -47,7 +47,7 @@ class ContextReturnGenerator:
 
 def main():
     print("=" * 65)
-    print("  EvalRAG Hello World — BM25 vs Vector vs Hybrid")
+    print("  EvalRag Hello World — BM25 vs Vector vs Hybrid")
     print("=" * 65)
 
     # Load data
@@ -99,7 +99,7 @@ def main():
         ("Hybrid (BM25+Vector)", hybrid_retriever),
     ]
 
-    from evalrag.core.types import ExperimentResult, QueryResult
+    from evalragkit.core.types import ExperimentResult, QueryResult
 
     all_results: list[ExperimentResult] = []
     k = 5

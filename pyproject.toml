@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "evalrag"
+name = "evalragkit"
 version = "0.0.0"  # placeholder — real version is stamped as major.minor.<UTC timestamp> at build time
 description = "Composable RAG evaluation library for experiment-based testing"
 readme = "README.md"
@@ -35,7 +35,7 @@ bm25 = ["rank-bm25"]
 ocr = ["easyocr", "Pillow"]
 cli = ["typer>=0.9"]
 all = [
-    "evalrag[chromadb,openai,unstructured,ragas,bm25,ocr,cli]",
+    "evalragkit[chromadb,openai,unstructured,ragas,bm25,ocr,cli]",
 ]
 dev = [
     "pytest>=7.0",
@@ -44,14 +44,14 @@ dev = [
 ]
 
 [project.scripts]
-evalrag = "evalrag.cli:app"
+evalragkit = "evalragkit.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/mameen/evalrag"
-Repository = "https://github.com/mameen/evalrag"
+Homepage = "https://github.com/mameen/EvalRag"
+Repository = "https://github.com/mameen/EvalRag"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/evalrag"]
+packages = ["src/evalragkit"]
 
 [tool.ruff]
 target-version = "py310"

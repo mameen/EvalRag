@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from evalrag.core.types import Chunk, Document
+from evalragkit.core.types import Chunk, Document
 
 
 class TokenChunker:

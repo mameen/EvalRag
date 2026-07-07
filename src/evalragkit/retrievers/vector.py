@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from evalrag.core.protocols import Embedder, Store
-from evalrag.core.types import RetrievalResult
+from evalragkit.core.protocols import Embedder, Store
+from evalragkit.core.types import RetrievalResult
 
 
 class VectorRetriever:

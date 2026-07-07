@@ -2,13 +2,13 @@
 
 from __future__ import annotations
 
-from evalrag.core.types import Chunk, RetrievalResult
+from evalragkit.core.types import Chunk, RetrievalResult
 
 
 class ChromaDBStore:
     """Persistent vector store backed by ChromaDB."""
 
-    def __init__(self, collection_name: str = "evalrag", persist_dir: str | None = None):
+    def __init__(self, collection_name: str = "evalragkit", persist_dir: str | None = None):
         self._collection_name = collection_name
         self._persist_dir = persist_dir
         self._collection = None

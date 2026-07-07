@@ -1,6 +1,6 @@
-from evalrag.core.types import Chunk, EvaluationScore, ExperimentResult, QueryResult, RetrievalResult
-from evalrag.exploration.inspector import Inspector
-from evalrag.exploration.reporter import Reporter
+from evalragkit.core.types import Chunk, EvaluationScore, ExperimentResult, QueryResult, RetrievalResult
+from evalragkit.exploration.inspector import Inspector
+from evalragkit.exploration.reporter import Reporter
 
 
 def _make_result(name: str, score: float) -> ExperimentResult:

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from evalrag.core.types import Document
+from evalragkit.core.types import Document
 
 
 class OCRExtractor:

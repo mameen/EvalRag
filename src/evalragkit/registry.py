@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any, Callable
 
-from evalrag.core.experiment import Experiment, QAPair
+from evalragkit.core.experiment import Experiment, QAPair
 
 _REGISTRY: dict[str, dict[str, Callable]] = {
     "extractor": {},
@@ -29,19 +29,19 @@ def get(stage: str, name: str) -> Callable:
 
 
 def _register_builtins() -> None:
-    from evalrag.chunkers.token import TokenChunker
-    from evalrag.embedders.ollama import OllamaEmbedder
-    from evalrag.embedders.openai import OpenAIEmbedder
-    from evalrag.embedders.sentence_transformer import SentenceTransformerEmbedder
-    from evalrag.evaluators.ragas import RagasEvaluator
-    from evalrag.extractors.unstructured import PlainTextExtractor, UnstructuredExtractor
-    from evalrag.generators.ollama import OllamaGenerator
-    from evalrag.generators.openai import OpenAIGenerator
-    from evalrag.ranking.metrics import RankingEvaluator
-    from evalrag.retrievers.hybrid import HybridRetriever
-    from evalrag.retrievers.keyword import BM25Retriever
-    from evalrag.retrievers.vector import VectorRetriever
-    from evalrag.stores.chromadb import ChromaDBStore
+    from evalragkit.chunkers.token import TokenChunker
+    from evalragkit.embedders.ollama import OllamaEmbedder
+    from evalragkit.embedders.openai import OpenAIEmbedder
+    from evalragkit.embedders.sentence_transformer import SentenceTransformerEmbedder
+    from evalragkit.evaluators.ragas import RagasEvaluator
+    from evalragkit.extractors.unstructured import PlainTextExtractor, UnstructuredExtractor
+    from evalragkit.generators.ollama import OllamaGenerator
+    from evalragkit.generators.openai import OpenAIGenerator
+    from evalragkit.ranking.metrics import RankingEvaluator
+    from evalragkit.retrievers.hybrid import HybridRetriever
+    from evalragkit.retrievers.keyword import BM25Retriever
+    from evalragkit.retrievers.vector import VectorRetriever
+    from evalragkit.stores.chromadb import ChromaDBStore
 
     register("extractor", "unstructured", UnstructuredExtractor)
     register("extractor", "plaintext", PlainTextExtractor)
@@ -86,7 +86,7 @@ def build_experiment(config: dict[str, Any]) -> tuple[Experiment, list[QAPair]]:
             from pathlib import Path
             items = json.loads(Path(ds_config["file"]).read_text())
         elif "name" in ds_config:
-            from evalrag.datasets.registry import load
+            from evalragkit.datasets.registry import load
             items = load(ds_config["name"])
         else:
             items = ds_config.get("items", [])

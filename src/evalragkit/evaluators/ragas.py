@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from evalrag.core.types import Chunk, EvaluationScore
+from evalragkit.core.types import Chunk, EvaluationScore
 
 
 class RagasEvaluator:

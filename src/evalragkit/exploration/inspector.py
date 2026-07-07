@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from evalrag.core.types import Chunk, ExperimentResult
+from evalragkit.core.types import Chunk, ExperimentResult
 
 
 class Inspector:

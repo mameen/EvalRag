@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from evalrag.core.protocols import Retriever
-from evalrag.core.types import Chunk, RetrievalResult
+from evalragkit.core.protocols import Retriever
+from evalragkit.core.types import Chunk, RetrievalResult
 
 
 class HybridRetriever:

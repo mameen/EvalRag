@@ -1,4 +1,4 @@
-from evalrag.extractors.unstructured import PlainTextExtractor
+from evalragkit.extractors.unstructured import PlainTextExtractor
 
 
 def test_plaintext_extractor(sample_text_path):

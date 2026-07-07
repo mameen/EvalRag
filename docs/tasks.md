@@ -1,4 +1,4 @@
-# EvalRAG - Tasks to v0.1.x
+# EvalRag - Tasks to v0.1.x
 
 Target: first usable release with core pipeline, one implementation per stage, tests, and docs.
 

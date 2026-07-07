@@ -1,5 +1,5 @@
-from evalrag.core.types import Chunk
-from evalrag.retrievers.keyword import BM25Retriever
+from evalragkit.core.types import Chunk
+from evalragkit.retrievers.keyword import BM25Retriever
 
 
 def test_bm25_retriever():

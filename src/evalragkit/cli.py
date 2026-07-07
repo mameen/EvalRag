@@ -1,4 +1,4 @@
-"""EvalRAG CLI."""
+"""EvalRag CLI."""
 
 from __future__ import annotations
 
@@ -9,13 +9,13 @@ from pathlib import Path
 try:
     import typer
 except ImportError:
-    print("CLI requires typer: pip install evalrag[cli]", file=sys.stderr)
+    print("CLI requires typer: pip install evalragkit[cli]", file=sys.stderr)
     raise SystemExit(1)
 
-from evalrag.core.experiment import Experiment
-from evalrag.exploration.reporter import Reporter
+from evalragkit.core.experiment import Experiment
+from evalragkit.exploration.reporter import Reporter
 
-app = typer.Typer(help="EvalRAG - composable RAG evaluation")
+app = typer.Typer(help="EvalRag - composable RAG evaluation")
 
 
 @app.command()
@@ -24,7 +24,7 @@ def run(
     output: Path = typer.Option("results.json", help="Output path for results"),
 ):
     """Run an experiment from a config file."""
-    from evalrag.registry import build_experiment
+    from evalragkit.registry import build_experiment
 
     cfg = json.loads(config.read_text())
     experiment, dataset = build_experiment(cfg)
@@ -54,7 +54,7 @@ def compare(
 @app.command()
 def datasets():
     """List available datasets."""
-    from evalrag.datasets.registry import REGISTRY
+    from evalragkit.datasets.registry import REGISTRY
 
     for name, info in REGISTRY.items():
         typer.echo(f"  {name}: {info['description']}")
@@ -63,7 +63,7 @@ def datasets():
 @app.command()
 def download(name: str = typer.Argument(..., help="Dataset name")):
     """Download a dataset to local cache."""
-    from evalrag.datasets.registry import download as dl
+    from evalragkit.datasets.registry import download as dl
 
     path = dl(name)
     typer.echo(f"Downloaded to {path}")

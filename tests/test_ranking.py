@@ -1,4 +1,4 @@
-from evalrag.ranking.metrics import (
+from evalragkit.ranking.metrics import (
     RankingEvaluator,
     average_precision,
     ndcg_at_k,

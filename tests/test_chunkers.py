@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from evalrag.chunkers.token import TokenChunker
-from evalrag.core.types import Document
+from evalragkit.chunkers.token import TokenChunker
+from evalragkit.core.types import Document
 
 
 def test_token_chunker_splits():
