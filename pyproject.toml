@@ -29,14 +29,13 @@ dependencies = [
 [project.optional-dependencies]
 chromadb = ["chromadb>=0.4"]
 openai = ["openai>=1.0"]
-anthropic = ["anthropic>=0.20"]
 unstructured = ["unstructured[all-docs]"]
 ragas = ["ragas>=0.1"]
 bm25 = ["rank-bm25"]
 ocr = ["easyocr", "Pillow"]
 cli = ["typer>=0.9"]
 all = [
-    "evalrag[chromadb,openai,anthropic,unstructured,ragas,bm25,ocr,cli]",
+    "evalrag[chromadb,openai,unstructured,ragas,bm25,ocr,cli]",
 ]
 dev = [
     "pytest>=7.0",
