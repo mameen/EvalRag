@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "evalrag"
-version = "0.0.20260705050000"
+version = "0.0.0"  # placeholder — real version is stamped as major.minor.<UTC timestamp> at build time
 description = "Composable RAG evaluation library for experiment-based testing"
 readme = "README.md"
 license = "MIT"
